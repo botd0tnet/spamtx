@@ -6,8 +6,10 @@ vi=(game15k34shvxu8qnc07fachdpew06aqkj2n032r65m game15g5hd5cyk8ljqh3pdzhlxpgqwct
 rand=$[$RANDOM % ${#vi[@]}]
 vitx=${vi[$rand]}
 
+rpc=(tcp://194.163.158.226:26657 tcp://135.181.73.109:26657 tcp://62.171.177.10:26657 tcp://95.217.107.96:26657)
+rpcrand=$[$RANDOM % ${#rpc[@]}]
+link=${rpc[$rand]}
 
-nibirud tx bank send $WALLET $vitx 10000ugame --gas auto --gas-prices 0.025ugame --chain-id=neuron-1 -y
+nibirud tx bank send $WALLET $vitx 123ugame --gas auto --gas-prices 0.025ugame --chain-id=neuron-1 --node $link -y
 
-
-sleep 30
+sleep 1
