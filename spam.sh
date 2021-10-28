@@ -13,3 +13,5 @@ link=${rpc[$rand]}
 nibirud tx bank send $WALLET $vitx 123ugame --gas auto --gas-prices 0.025ugame --chain-id=neuron-1 --node $link -y
 
 sleep 1
+
+clear
