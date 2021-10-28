@@ -1,0 +1,13 @@
+#!/usr/bin/expect -f
+
+spawn ./spam.sh
+
+
+set PASSWD "1234jqka12"
+
+
+expect "Enter keyring passphrase:"
+send "$PASSWD\r"
+sleep 2
+
+interact
